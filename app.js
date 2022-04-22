@@ -52,7 +52,7 @@ function addPlay(socket, callback) {
         var ip = socket.handshake.address;
         //ip = "5.149.142.22";
         if (geoip.lookup(ip) != null) {
-            plays.country = country;
+            plays.country = geoip.lookup(ip).country;
             //console.log(plays.plays);
             //console.log(plays.country);
         }
