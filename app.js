@@ -51,9 +51,14 @@ function addPlay(socket, callback) {
         plays.plays = plays.plays + 1;
         var ip = socket.handshake.address;
         //ip = "5.149.142.22";
-        plays.country = geoip.lookup(ip).country;
-        console.log(plays.plays);
-        console.log(plays.country);
+        if (geoip.lookup(ip) != null) {
+            plays.country = country;
+            //console.log(plays.plays);
+            //console.log(plays.country);
+        }
+        else{
+            plays.country = 'BE';
+        }
         fs.writeFile('data/plays.json', JSON.stringify(plays), (err) => {
             if (err) throw err;
             return callback(plays);
