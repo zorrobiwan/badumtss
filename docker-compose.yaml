@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  badumtss:
+    image: badutmss
+    build: .
+    ports:
+      - 3003:3003
+    volumes:
+      - './data:/app/data'  

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	<div class="center justify-content-center">
+
+		<audio id="badumtss-sound" src="mp3/badumtss.mp3"></audio>
+		<span class="">
+			<h1>BaDumTss with your friends</h1>
+			<h3>
+				<br>
+				<span id="plays"></span>
+				BaDumTss
+				<br>
+				<br>Last one from
+				<br><img id="country" src="">
+				Click anywhere
+			</h3>
+		</span>
+
+	</div>
+{% endblock %}
+
+
+{% block javascript %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/badumtss.js"></script>
+	<script src="/js/analytics.js"></script>
+{% endblock %}

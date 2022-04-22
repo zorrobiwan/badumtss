@@ -1,0 +1,33 @@
+{
+  "name": "badumtss-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "geoip-country": "^4.0.115",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.4.1",
+    "twig": "^1.15.4"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "app.js",
+      "views",
+      "public"
+    ],
+    "ext": "*",
+    "ignore": [
+      "data/*.json"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon app.js"
+  },
+  "author": "Pascal Alberty"
+}
